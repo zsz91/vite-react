@@ -1,9 +1,31 @@
-export function counter(state = 0, action) {
-    console.log('counter', state, action);
-    switch (action.type) {
-        case 'increment':
-            return state + action.number;
-        default:
-            return state;
-    }
+/***
+ * 按文件名导出所有的reducer
+ * */
+const models = import.meta.globEager('./*.ts');
+for(let item in models){
+   const newKey = models[item].default.namespace;
+   models[newKey] = models[item].default;
+   delete models[item];
 }
+export default function reducer(state = {}, action) {
+   if(!action?.type || action.type.indexOf(`/`) === -1){
+      throw new Error('没有正确的type');
+   }
+   const type = action.type.split('/'); //
+   const modelName: string = type[0];
+   const model: object = models[modelName]; //对应的model
+   const initState: object = {};
+   for(let item in models){
+      initState[item] = models[item].state || {}; // 初始化state
+   }
+   if(!model){
+      console.info('没有找到对应的model');
+      return initState;
+      // throw new Error('没有找到对应的model');
+   }
+   console.log(initState[modelName]);
+   initState[modelName] = model[type[1]](action);
+   console.log(initState);
+   return initState;
+}
+

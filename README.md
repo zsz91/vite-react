@@ -11,3 +11,7 @@
 ## vite 官网
 https://cn.vitejs.dev/
 
+
+## 安装与启动
+npm install
+npm run dev

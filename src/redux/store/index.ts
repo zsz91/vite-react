@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
-import { counter } from '../reducer';
+import { createStore,combineReducers } from 'redux';
+import reducers from '../reducer';
 
-export default createStore(counter);
+export default createStore(reducers);
