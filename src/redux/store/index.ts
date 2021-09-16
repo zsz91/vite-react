@@ -1,4 +1,4 @@
-import { createStore,combineReducers } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducers from '../reducer';
-
-export default createStore(reducers);
+import reduxPromise  from 'redux-promise';
+export default createStore(reducers, {}, applyMiddleware(reduxPromise));

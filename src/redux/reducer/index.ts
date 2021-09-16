@@ -19,13 +19,9 @@ export default function reducer(state = {}, action) {
       initState[item] = models[item].state || {}; // 初始化state
    }
    if(!model){
-      console.info('没有找到对应的model');
-      return initState;
-      // throw new Error('没有找到对应的model');
+      return initState; // 没有找到model模型 直接return state
    }
-   console.log(initState[modelName]);
-   initState[modelName] = model[type[1]](action);
-   console.log(initState);
+   initState[modelName] = model[type[1]](action?.payload);
    return initState;
 }
 
