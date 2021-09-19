@@ -1,0 +1,40 @@
+.zy_public_head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  //background-color: rgba(1,99,175,1);
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  height: 80px;
+  justify-items: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  .content{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 700px;
+  }
+  .ant-menu{
+    background-color: transparent;
+    ul,li{
+      color: #fff !important;
+    }
+    .ant-menu-item-selected{
+      font-size: 1.3rem !important;
+    }
+  }
+  .ant-menu-horizontal{
+    border-bottom: none;
+  }
+  .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+    border-bottom: 2px solid #fff;
+  }
+  .ant-menu-light .ant-menu-item:hover, .ant-menu-light .ant-menu-item-active, .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-light .ant-menu-submenu-active, .ant-menu-light .ant-menu-submenu-title:hover{
+    color: #fff !important;
+  }
+}

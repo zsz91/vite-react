@@ -1,8 +1,186 @@
 .divHome {
   font-size: 2rem;
-
+  //min-height: 200vh;
   h2 {
     font-size: 1rem;
     color: red;
+  }
+
+
+}
+
+.sliderImages {
+  height: 70vh;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  .content1{
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    padding-top: 10%;
+    color: #fff;
+    font-family: PingFangSC, PingFangSC-Regular;
+    .title1{
+      opacity: 1;
+      font-size: 3rem;
+      font-weight: 500;
+      margin: 1rem 0;
+    }
+    .title2{
+      opacity: 0.6;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin: 1rem 0;
+    }
+  }
+
+  .content2{
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    color: #fff;
+    font-family: PingFangSC, PingFangSC-Regular;
+    text-align: center;
+    .content2_title1{
+      opacity: 1;
+      font-size: 3rem;
+      font-weight: 500;
+      margin: 1rem 0;
+    }
+    .content2_title2{
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin: 1rem 0;
+      div{
+        background-image: radial-gradient(transparent,rgba(255,255,255,0.1), transparent);
+        //background-image: radial-gradient(#ffffff, rgba(255,255,255,0.00));
+        box-shadow: 0px 6px 8px 4px rgba(0,0,0,0.00);
+        width: 200px;
+        margin: auto;
+        font-weight: 300;
+      }
+    }
+  }
+
+}
+
+
+.littleTitle{
+  margin: 2rem 0;
+  text-align: center;
+  height: 3rem;
+  background-color: #fff;
+  color: #333333;
+  font-size: 2.1rem;
+  line-height: 2.1rem;
+  font-weight: bold;
+  div{
+    margin: 0 auto;
+    display: inline;
+  }
+  .littleTitle-line{
+    height: 100%;
+    border: 1px solid #34a1ff;
+    background-color: #34a1ff;
+    padding: 0 2px;
+    margin: 0 1rem;
+  }
+}
+
+.JieJueFangAn{
+  //display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px;
+  height: 460px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1.5rem;
+  .jieJueFangAn_bgDiv{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    :hover{
+      background: rgba(87,179,255,0.1);
+    }
+  }
+  .jieJueFangAn_DetailDiv{
+    height:100%;
+    width:100%;
+    background-color: rgba(87,179,255,0.3);
+    :hover{
+      background: transparent;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    p{
+      margin-bottom: unset;
+      cursor: default;
+
+    }
+  }
+  .jieJueFangAn_DetailDiv_hover{
+
+  }
+
+}
+
+
+.XinWenDongTai{
+  display: grid;
+  grid-template-rows: 370px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+  width: 1200px;
+  margin: 0 auto 2rem auto;
+  background-color: #F9FBFD;
+  cursor: pointer;
+  .XinWenDongTai_One{
+    display: grid;
+    grid-template-rows: 240px 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+    background-color: #fff;
+    .XinWenDongTai_One_img{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .XinWenDongTai_One_info{
+      font-size: 1rem;
+      padding: 0.5rem;
+      color: rgba(0,0,0,0.45);
+      word-wrap: break-word;
+      overflow: hidden;
+      //white-space: wr;
+      text-overflow: ellipsis;
+      h4{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        font-size: 1.2rem;
+        font-family: PingFangSC, PingFangSC-Medium;
+        font-weight: bold;
+        color: #000;
+        height: 48px;
+      }
+      p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
   }
 }

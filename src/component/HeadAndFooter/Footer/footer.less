@@ -1,0 +1,39 @@
+.zy_footer{
+  height: 240px;
+  background-image: url("/images/footer/foot背景.png");
+  //width: 100vw;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  .zy_footer_content{
+    width: 1200px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    text-align: left;
+    color: #fff;
+    font-family: PingFangSC, PingFangSC-Medium;
+    font-weight: 500;
+    .zy_footer_margin2rem{
+      margin: 2.5rem 0;
+    }
+    .zy_footer_margin1rem{
+      margin-bottom: 1rem;
+    }
+    .zy_footer_detailInfo{
+      opacity: 0.6;
+    }
+  }
+  .zy_footer_rightQrCode{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 170px 30px;
+    img{
+      width: 120px;
+    }
+  }
+}
